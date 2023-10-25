@@ -9,14 +9,35 @@
 </head>
 
 <body>
+  <div class="container">
+    <section>
+      <article>
+        <fieldset class="greenBorder">
+          <span class="score homeScore">0</span>
+          <legend>Home</legend>
+        </fieldset>
+        <button class="btn btnGreen btnHome" onclick="homePoints(1)">+1</button>
+        <button class="btn btnGreen btnHome" onclick="homePoints(2)">+2</button>
+        <button class="btn btnGreen btnHome" onclick="homePoints(3)">+3</button>
+      </article>
 
-<header></header>
+      <article>
+        <fieldset class="blueBorder">
+          <span class="score awayScore">0</span>
+          <legend>Away</legend>
+        </fieldset>
+        <button class="btn btnBlue btnAway" onclick="awayPoints(1)">+1</button>
+        <button class="btn btnBlue btnAway" onclick="awayPoints(2)">+2</button>
+        <button class="btn btnBlue btnAway" onclick="awayPoints(3)">+3</button>
+      </article>
 
-<main></main>
+    </section>
+    <section>
 
-<footer></footer>
-
-<script src="./assets/js/main.js"></script>
+      <button class="resetBtn" onclick="resetBtn()">Reset</button>
+    </section>
+  </div>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

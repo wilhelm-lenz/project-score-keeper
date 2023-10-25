@@ -14,8 +14,13 @@
 /* =================================== */
 
 @font-face {
-  font-family: "";
-  src: url();
+  font-family: "Orbitron-Regular";
+  src: url("../fonts/Orbitron-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato-Regular.ttf");
 }
 
 /* =================================== */
@@ -23,43 +28,49 @@
 /* =================================== */
 
 * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-
 }
-
 
 /* =================================== */
 /* HELPER CLASSES */
 /* =================================== */
 
-.container{max-width: 1440px; margin: 0 auto;}
-
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
 /* =================================== */
 /* GENERAL STYLES */
 /* =================================== */
 
 html {
-/* Percentage of user's browser font-size setting */
-/* 10px / 16px * 100% = 62,5% */
-font-size: 62.5%;
+  /* Percentage of user's browser font-size setting */
+  /* 10px / 16px * 100% = 62,5% */
+  font-size: 62.5%;
 }
 
 body {
-font-family: sans-serif;
-line-height: 1;
-font-weight: 400;
-color: #555;
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  height: 100vh;
+  background-color: #2c2c2c;
 }
 
 a {
-text-decoration: none;
-color: #555;
+  text-decoration: none;
+  color: #555;
 }
 
 /*header, section {margin-bottom: 60px}*/
@@ -72,11 +83,97 @@ color: #555;
 /* ------ SECTION HEADER ------ */
 /* ----------------------*/
 
-
 /* ----------------------*/
 /* ------ MAIN ------ */
 /* ----------------------*/
 
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+}
+
+section:nth-of-type(2) {
+  height: 30vh;
+}
+
+article {
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Orbitron-Regular";
+  flex: 1;
+  border: none;
+  width: 30rem;
+  height: 30rem;
+  margin-bottom: 80px;
+  border-radius: 16px;
+}
+
+.greenBorder {
+  border: 3px solid #97f5bb;
+}
+.blueBorder {
+  border: 3px solid #525df4;
+}
+
+.score {
+  font-size: 13rem;
+  color: #fdf860;
+  display: inline-block;
+  padding: 6rem 7rem;
+  background-color: black;
+  border-radius: 16px;
+}
+
+legend {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  padding: 0 8px;
+  background: #2c2c2c;
+  color: white;
+  font-size: 2rem;
+  font-family: "Orbitron-Regular";
+}
+
+.btn {
+  font-family: "Lato-Regular";
+  font-size: 3rem;
+  padding: 1.2rem;
+  border-radius: 16px;
+  border: none;
+
+  color: white;
+}
+
+.btn:nth-of-type(2) {
+  margin-inline: 10px;
+}
+
+.btnGreen {
+  background-color: #97f5bb;
+}
+.btnBlue {
+  background-color: #525df4;
+}
+
+.resetBtn {
+  padding: 5px 24px;
+  border-radius: 8px;
+  border: none;
+  align-self: flex-start;
+}
 
 /* ----------------------*/
 /* ------ SECTION FOOTER ------ */
