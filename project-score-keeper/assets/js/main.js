@@ -9,6 +9,6 @@ const awayPoints = (points) =>
   (awayScoreElement.textContent =
     Number(awayScoreElement.textContent) + points);
 
-const resetBtn = (points) => (
-  (homeScoreElement.textContent = "0"), (awayScoreElement.textContent = "0")
+const resetBtn = () => (
+  (homeScoreElement.textContent = 0), (awayScoreElement.textContent = 0)
 );
